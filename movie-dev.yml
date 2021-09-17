@@ -1,0 +1,22 @@
+
+server:
+  port: 8001
+spring:
+  application: 
+    name: movieService
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8002/eureka #,http://127.0.0.1:9002/eureka (for eureka cluster)
+  instance:
+    prefer-ip-address: true
+silver:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netfliex.loadbalancer.RandomRule
+    
+feign:
+  circuitbreaker:
+    enabled: true 

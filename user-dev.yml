@@ -1,0 +1,26 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: silver
+  datasource:
+    url: jdbc:mysql://10.5.1.48:3306/springcloud?characterEncoding=UTF8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+  jpa: 
+    show-sql: true
+    generate-ddl: true #是否自動建立表格
+    database: mysql #所使用database
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+eureka:
+  client:
+    register-with-eureka: true #客戶端要註冊到eureka
+    fetch-registry: true #客戶端要從eureka獲取資訊
+    service-url:
+      defaultZone: http://127.0.0.1:8002/eureka #,http://127.0.0.1:9002/eureka #(打開前一個# 是for Eureka叢集版)
+  instance:
+    prefer-ip-address: true #優先使用該服務ip去註冊 而不是用域名
+        
