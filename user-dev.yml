@@ -4,7 +4,7 @@ spring:
   application:
     name: silver
   datasource:
-    url: jdbc:mysql://10.5.1.48:3306/springcloud?characterEncoding=UTF8
+    url: jdbc:mysql://10.10.1.225:3306/springcloud?characterEncoding=UTF8
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 123456
